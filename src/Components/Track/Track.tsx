@@ -2,9 +2,9 @@ import React from 'react';
 import './Track.css';
 
 interface IProps {
-  track:{name:string, artist:string, album:string, id:string};
-  onAdd?: (track:{name:string, artist:string, album:string, id:string}) => void;
-  onRemove?: (track:{name:string, artist:string, album:string, id:string}) => void;
+  track:{name:string, artist:string, album:string, id:string, uri:string};
+  onAdd?: (track:{name:string, artist:string, album:string, id:string, uri:string}) => void;
+  onRemove?: (track:{name:string, artist:string, album:string, id:string, uri:string}) => void;
   isRemoval?: boolean;
 }
 

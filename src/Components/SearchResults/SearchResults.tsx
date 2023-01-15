@@ -3,8 +3,8 @@ import './SearchResults.css';
 import { TrackList } from '../TrackList/TrackList';
 
 interface IProps {
-  searchResults?: {name:string, artist:string, album:string, id:string}[],
-  onAdd: (track:{name:string, artist:string, album:string, id:string}) => void;
+  searchResults?: {name:string, artist:string, album:string, id: string, uri: string}[],
+  onAdd: (track:{name:string, artist:string, album:string, id:string, uri:string}) => void;
 }
 
 interface IState {

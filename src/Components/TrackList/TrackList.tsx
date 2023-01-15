@@ -3,9 +3,9 @@ import './TrackList.css';
 import { Track } from '../Track/Track';
 
 interface IProps {
-    tracks?: { name: string, artist: string, album: string, id: string }[];
-    onAdd?: (track: { name: string, artist: string, album: string, id: string }) => void;
-    onRemove?: (track: { name: string, artist: string, album: string, id: string }) => void;
+    tracks?: { name: string, artist: string, album: string, id: string, uri: string }[];
+    onAdd?: (track: { name: string, artist: string, album: string, id: string, uri:string }) => void;
+    onRemove?: (track: { name: string, artist: string, album: string, id: string, uri:string }) => void;
     isRemoval?: boolean;
 }
 

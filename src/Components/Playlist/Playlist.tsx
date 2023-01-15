@@ -4,8 +4,8 @@ import { TrackList } from '../TrackList/TrackList';
 
 interface IProps {
     playlistName: string;
-    playlistTracks?: {name:string, artist:string, album:string, id:string}[];
-    onRemove?: (track:{name:string, artist:string, album:string, id:string}) => void;
+    playlistTracks?: {name:string, artist:string, album:string, id:string, uri: string}[];
+    onRemove?: (track:{name:string, artist:string, album:string, id:string, uri: string}) => void;
     onNameChange?: (name:string) => void;
     onSave?: () => void;
 }
