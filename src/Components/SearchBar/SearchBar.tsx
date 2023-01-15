@@ -19,14 +19,14 @@ export class SearchBar extends React.Component<IProps, IState> {
   //   this.props.onSearch && this.props.onSearch('search term');
   // }
 
-  handleTermChange(event:React.ChangeEvent<HTMLInputElement>) {
+  handleTermChange(event: React.ChangeEvent<HTMLInputElement>) {
     this.props.onSearch && this.props.onSearch(event.target.value);
   }
 
   render() {
     return (
       <div className="SearchBar">
-        <input placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange}/>
+        <input placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange} />
         <button className="SearchButton">SEARCH</button>
       </div>
     );

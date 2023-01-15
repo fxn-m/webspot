@@ -2,9 +2,9 @@ import React from 'react';
 import './Track.css';
 
 interface IProps {
-  track:{name:string, artist:string, album:string, id:string, uri:string};
-  onAdd?: (track:{name:string, artist:string, album:string, id:string, uri:string}) => void;
-  onRemove?: (track:{name:string, artist:string, album:string, id:string, uri:string}) => void;
+  track: { name: string, artist: string, album: string, id: string, uri: string };
+  onAdd?: (track: { name: string, artist: string, album: string, id: string, uri: string }) => void;
+  onRemove?: (track: { name: string, artist: string, album: string, id: string, uri: string }) => void;
   isRemoval?: boolean;
 }
 
@@ -12,7 +12,7 @@ interface IState {
 }
 
 export class Track extends React.Component<IProps, IState> {
-  constructor(props:IProps) {
+  constructor(props: IProps) {
     super(props);
     this.addTrack = this.addTrack.bind(this);
     this.renderAction = this.renderAction.bind(this);
@@ -37,13 +37,13 @@ export class Track extends React.Component<IProps, IState> {
 
   render() {
     return (
-    <div className="Track">
-      <div className="Track-information">
-        <h3>{this.props.track.name}</h3>
-        <p>{this.props.track.artist} | {this.props.track.album}</p>
-      </div>
+      <div className="Track">
+        <div className="Track-information">
+          <h3>{this.props.track.name}</h3>
+          <p>{this.props.track.artist} | {this.props.track.album}</p>
+        </div>
         {this.renderAction()}
-    </div>
+      </div>
     );
   }
 }
