@@ -1,7 +1,11 @@
 let accessToken = '';
 // create constant variables for client ID and redirect URI.
 const CLIENT_ID: string = 'e221dd36279d4db3ad6b956231058320';
-const REDIRECT_URI: string = window.location.href;
+let REDIRECT_URI: string;
+if (window.location.href.includes('localhost')) {
+  REDIRECT_URI = 'http://localhost:3000/';
+} else {
+  REDIRECT_URI = 'https://fxn-m.com/jammming/';}
 
 const Spotify = {
   getAccessToken() {
