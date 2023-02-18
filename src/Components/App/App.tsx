@@ -55,6 +55,9 @@ class App extends React.Component<IProps, IState> {
           playlistName: 'New Playlist',
           playlistTracks: []
         });
+        // reset the playlist name field
+        const playlistNameInput = document.getElementById('playlistNameField') as HTMLInputElement;
+        playlistNameInput.value = 'New Playlist';
       });
   }
 
