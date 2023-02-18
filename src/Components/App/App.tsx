@@ -11,7 +11,7 @@ interface IProps {
 interface IState {
   searchResults?: { name: string, artist: string, album: string, id: string, uri: string }[];
   playlistName: string;
-  playlistTracks?: { name: string, artist: string, album: string, id: string, uri: string }[];
+  playlistTracks: { name: string, artist: string, album: string, id: string, uri: string }[];
 }
 
 class App extends React.Component<IProps, IState> {
@@ -48,11 +48,17 @@ class App extends React.Component<IProps, IState> {
   }
 
   savePlaylist() {
-    // const trackURIs = this.state.playlistTracks?.map(track => track.id);
+    const trackURIs = this.state.playlistTracks.map(track => track.uri);
+    Spotify.savePlaylist(this.state.playlistName, trackURIs)
+      .then(() => {
+        this.setState({
+          playlistName: 'New Playlist',
+          playlistTracks: []
+        });
+      });
   }
 
   search(term: string) {
-    console.log(term);
     Spotify.search(term).then((results: { name: string, artist: string, album: string, id: string, uri: string }[]) => {
       this.setState({ searchResults: results });
     });
