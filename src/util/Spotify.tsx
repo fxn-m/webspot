@@ -3,9 +3,9 @@ let accessToken = '';
 const CLIENT_ID: string = 'e221dd36279d4db3ad6b956231058320';
 let REDIRECT_URI: string;
 if (window.location.href.includes('localhost')) {
-  REDIRECT_URI = 'http://localhost:3000/';
+  REDIRECT_URI = 'localhost:3000/WebSpot';
 } else {
-  REDIRECT_URI = 'https://fxn-m.com/jammming/';}
+  REDIRECT_URI = 'https://fxn-m.com/WebSpot/';}
 
 const Spotify = {
   getAccessToken() {
