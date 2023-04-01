@@ -35,7 +35,7 @@ const Spotify = {
       const expiresIn = Number(expiresInMatch[1]);
 
       window.setTimeout(() => accessToken = '', expiresIn * 1000);
-      window.history.pushState('Access Token', '', '/');
+      window.history.pushState('Access Token', '', '/WebSpot');
     }
 
     /*
