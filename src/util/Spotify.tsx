@@ -5,7 +5,7 @@ let REDIRECT_URI: string;
 if (window.location.href.includes('localhost')) {
   REDIRECT_URI = 'localhost:3000/WebSpot';
 } else {
-  REDIRECT_URI = 'https://fxn-m.com/WebSpot/';}
+  REDIRECT_URI = 'https://fxn-m.com/webspot/';}
 
 const Spotify = {
   getAccessToken() {
