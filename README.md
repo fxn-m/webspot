@@ -1,4 +1,4 @@
-# WebSpot 🎵
+# webspot 🎵
 
 Create Spotify playlists on the browser.
 
